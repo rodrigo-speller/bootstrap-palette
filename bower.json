@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-palette",
+  "description": "A plugin to add more colors to Bootstrap.",
+  "keywords": [
+    "css",
+    "less",
+    "responsive",
+    "front-end",
+    "web"
+  ],
+  "homepage": "https://github.com/rodrigo-speller/bootstrap-palette",
+  "license": "MIT",
+  "main": [
+    "less/bootstrap-palette.less"
+  ],
+  "ignore": [
+    "/.*",
+  ],
+  "dependencies": {
+    "bootstrap": ">=3.3.0 <4.0.0"
+  }
+}

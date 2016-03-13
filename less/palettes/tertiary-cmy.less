@@ -1,0 +1,64 @@
+// Copyright (c) 2016 Rodrigo Speller
+
+// Tertiary-CMY Palette
+// Palette with primary, secondary and tertiary CMY colors.
+//
+// Red, green and blue colors are absolutely defined. But the others colors are
+// calculated by interpolation of these colors.
+
+@colors: red, orange, yellow, chartreuse, green, springgreen, cyan, azure, blue, violet, magenta, rose;
+
+// primary colors (bases)
+@color-red:             #f00;
+@color-green:           #0f0;
+@color-blue:            #00f;
+
+// secondary colors (computed)
+@color-yellow:          hsv(
+                            (hsvhue(@color-red) + hsvhue(@color-green)) / 2,
+                            (hsvsaturation(@color-red) + hsvsaturation(@color-green)) / 2,
+                            (hsvvalue(@color-red) + hsvvalue(@color-green)) / 2
+                        );
+
+@color-cyan:            hsv(
+                            (hsvhue(@color-green) + hsvhue(@color-blue)) / 2,
+                             (hsvsaturation(@color-green) + hsvsaturation(@color-blue)) / 2,
+                            (hsvvalue(@color-green) + hsvvalue(@color-blue)) / 2
+                        );
+@color-magenta:         hsv(
+                            (hsvhue(@color-blue) + hsvhue(@color-red) + 360) / 2,
+                             (hsvsaturation(@color-blue) + hsvsaturation(@color-red)) / 2,
+                            (hsvvalue(@color-blue) + hsvvalue(@color-red)) / 2
+                        );
+
+// tertiary colors (computed)
+@color-orange:          hsv(
+                            (hsvhue(@color-red) + hsvhue(@color-yellow)) / 2,
+                            (hsvsaturation(@color-red) + hsvsaturation(@color-yellow)) / 2,
+                            (hsvvalue(@color-red) + hsvvalue(@color-yellow)) / 2
+                        );
+@color-chartreuse:      hsv(
+                            (hsvhue(@color-yellow) + hsvhue(@color-green)) / 2,
+                            (hsvsaturation(@color-yellow) + hsvsaturation(@color-green)) / 2,
+                            (hsvvalue(@color-yellow) + hsvvalue(@color-green)) / 2
+                        );
+@color-springgreen:     hsv(
+                            (hsvhue(@color-green) + hsvhue(@color-cyan)) / 2,
+                            (hsvsaturation(@color-green) + hsvsaturation(@color-cyan)) / 2,
+                            (hsvvalue(@color-green) + hsvvalue(@color-cyan)) / 2
+                        );
+@color-azure:           hsv(
+                            (hsvhue(@color-cyan) + hsvhue(@color-blue)) / 2,
+                            (hsvsaturation(@color-cyan) + hsvsaturation(@color-blue)) / 2,
+                            (hsvvalue(@color-cyan) + hsvvalue(@color-blue)) / 2
+                        );
+@color-violet:          hsv(
+                            (hsvhue(@color-blue) + hsvhue(@color-magenta)) / 2,
+                            (hsvsaturation(@color-blue) + hsvsaturation(@color-magenta)) / 2,
+                            (hsvvalue(@color-blue) + hsvvalue(@color-magenta)) / 2
+                        );
+@color-rose:            hsv(
+                            (hsvhue(@color-magenta) + hsvhue(@color-red) + 360) / 2,
+                            (hsvsaturation(@color-magenta) + hsvsaturation(@color-red)) / 2,
+                            (hsvvalue(@color-magenta) + hsvvalue(@color-red)) / 2
+                        );

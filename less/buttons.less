@@ -1,0 +1,16 @@
+// Copyright (c) 2016 Rodrigo Speller
+
+* {
+    .for(@i: 1) when (@i <= length(@colors)) {
+        @name: extract(@colors, @i);
+        @var: "color-@{name}";
+        @color: @@var;
+
+        &.btn-@{name} {
+            .button-variant(contrast(@color, @color-contrast-dark, @color-contrast-light, 50%); @color; darken(@color, 5%));
+        }
+
+        .for(@i + 1);
+    }
+    .for;
+}
