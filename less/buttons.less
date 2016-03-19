@@ -7,7 +7,7 @@
         @color: @@var;
 
         &.btn-@{name} {
-            .button-variant(contrast(@color, @color-contrast-dark, @color-contrast-light, 50%); @color; darken(@color, 5%));
+            .button-variant(contrast(@color, @color-contrast-dark, @color-contrast-light, @color-contrast-threshold); @color; darken(@color, 5%));
         }
 
         .for(@i + 1);

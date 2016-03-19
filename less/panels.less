@@ -14,12 +14,12 @@
             .panel-footer {
                 border-color: @color-dark;
                 background-color: @color;
-                color: contrast(@color, @color-contrast-dark, @color-contrast-light, 50%);
+                color: contrast(@color, @color-contrast-dark, @color-contrast-light, @color-contrast-threshold);
 
                 a {
-                    color: contrast(@color, @color-contrast-dark, @color-contrast-light, 50%);
+                    color: contrast(@color, @color-contrast-dark, @color-contrast-light, @color-contrast-threshold);
                     &:hover {
-                        color: contrast(@color, darken(@color-contrast-dark, 15%), lighten(@color-contrast-light, 15%), 50%);
+                        color: contrast(@color, darken(@color-contrast-dark, 15%), lighten(@color-contrast-light, 15%), @color-contrast-threshold);
                     }
                 }
             }

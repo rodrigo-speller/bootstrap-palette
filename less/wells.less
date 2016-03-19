@@ -22,7 +22,7 @@
         @color: @@var;
 
         &.well-@{name} {
-            .well-variant(contrast(@color, @color-contrast-dark, @color-contrast-light, 50%); @color; darken(@color, 15%));
+            .well-variant(contrast(@color, @color-contrast-dark, @color-contrast-light, @color-contrast-threshold); @color; darken(@color, 15%));
         }
 
         .for((@i + 1));
