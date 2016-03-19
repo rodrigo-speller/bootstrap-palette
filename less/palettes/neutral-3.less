@@ -6,15 +6,16 @@
 // White and black colors are absolutely defined. But the gray color is
 // calculated by interpolation of these colors.
 
-@colors: white, black, gray;
+@colors: neutral-3-white, neutral-3-black, neutral-3-gray;
 
 // base
-@color-white:           #fff;
-@color-black:           #000;
+@color-neutral-3-white: #fff;
+@color-neutral-3-black: #000;
 
 // computed
-@color-gray:            hsv(
-                            (hsvhue(@color-white) + hsvhue(@color-black)) / 2,
-                            (hsvsaturation(@color-white) + hsvsaturation(@color-black)) / 2,
-                            (hsvvalue(@color-white) + hsvvalue(@color-black)) / 2
-                        );
+@color-neutral-3-gray:
+    hsv(
+        (hsvhue(@color-white) + hsvhue(@color-black)) / 2,
+        (hsvsaturation(@color-white) + hsvsaturation(@color-black)) / 2,
+        (hsvvalue(@color-white) + hsvvalue(@color-black)) / 2
+    );
